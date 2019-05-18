@@ -1,0 +1,48 @@
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+}
+
+ext {
+    //Libraries
+    daggerVersion = '2.18'
+    daggerCompiler = '2.15'
+    kotlinVersion = '1.3.31'
+    rxJavaVersion = '2.2.8'
+    coreKtx = '1.0.2'
+
+    //Presentation
+    appcompatVersion = '1.0.2'
+    constraintLayout = '1.1.3'
+    material = '1.0.0'
+
+    //Testing
+    jUnitVersion = '4.12'
+    mockkVersion = '1.9.3.kotlin12'
+    testRunner = '1.1.1'
+    espressoCore = '3.1.1'
+
+    commonDependencies = [
+            kotlin:             "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlinVersion}",
+            daggerCompiler:     "com.google.dagger:dagger-compiler:${daggerCompiler}",
+            dagger:             "com.google.dagger:dagger:${daggerVersion}",
+            coreKtx:            "androidx.core:core-ktx:${coreKtx}",
+            rxJava:             "io.reactivex:rxjava:${rxJavaVersion}",
+    ]
+
+    presentationDependencies = [
+            appcompat:            "androidx.appcompat:appcompat:${appcompatVersion}",
+            constraintLayout:     "androidx.constraintlayout:constraintlayout:${constraintLayout}",
+            material:             "com.google.android.material:material:${material}"
+    ]
+
+    testDependencies = [
+            junit:              "junit:junit:${jUnitVersion}",
+            mockk:              "io.mockk:mockk:${mockkVersion}",
+            testRunner:         "androidx.test:runner:${testRunner}",
+            espressoCore:       "androidx.test.espresso:espresso-core:${espressoCore}",
+    ]
+}

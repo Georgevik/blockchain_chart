@@ -1,0 +1,41 @@
+apply plugin: 'com.android.feature'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 28
+
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+
+}
+
+dependencies {
+    def commonDependencies = rootProject.ext.commonDependencies
+    def testDependencies = rootProject.ext.testDependencies
+    def presentationDependencies = rootProject.ext.presentationDependencies
+
+    api commonDependencies.kotlin
+    api commonDependencies.coreKtx
+    api commonDependencies.dagger
+    kapt commonDependencies.daggerCompiler
+
+    // Android X
+    api presentationDependencies.appcompat
+
+    // Test
+    testApi testDependencies.junit
+    testApi testDependencies.mockk
+}
