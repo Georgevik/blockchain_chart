@@ -30,7 +30,7 @@ ext {
             daggerCompiler:     "com.google.dagger:dagger-compiler:${daggerCompiler}",
             dagger:             "com.google.dagger:dagger:${daggerVersion}",
             coreKtx:            "androidx.core:core-ktx:${coreKtx}",
-            rxJava:             "io.reactivex:rxjava:${rxJavaVersion}",
+            rxJava:             "io.reactivex.rxjava2:rxjava:${rxJavaVersion}",
     ]
 
     presentationDependencies = [

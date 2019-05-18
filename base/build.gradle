@@ -30,12 +30,13 @@ dependencies {
     api commonDependencies.kotlin
     api commonDependencies.coreKtx
     api commonDependencies.dagger
+    api commonDependencies.rxJava
     kapt commonDependencies.daggerCompiler
 
     // Android X
     api presentationDependencies.appcompat
 
     // Test
-    testApi testDependencies.junit
+    testApi "junit:junit:${jUnitVersion}"
     testApi testDependencies.mockk
 }
