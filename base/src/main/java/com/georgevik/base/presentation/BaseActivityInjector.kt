@@ -7,9 +7,8 @@ abstract class BaseActivityInjector<T> : BaseActivity() {
     private var component: T? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        inject(getComponent())
-
         super.onCreate(savedInstanceState)
+        inject(getComponent())
     }
 
     fun getComponent(): T = component ?: createComponent()

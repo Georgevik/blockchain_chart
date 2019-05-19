@@ -8,8 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 abstract class BaseActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        setContentView(getLayoutId())
         super.onCreate(savedInstanceState)
+        setContentView(getLayoutId())
     }
 
     @LayoutRes
