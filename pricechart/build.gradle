@@ -31,7 +31,10 @@ dependencies {
     implementation presentationDependencies.constraintLayout
     implementation presentationDependencies.material
 
+
     // Test
+    testImplementation "junit:junit:${jUnitVersion}"
+    testImplementation testDependencies.mockk
     androidTestImplementation testDependencies.testRunner
     androidTestImplementation testDependencies.espressoCore
 

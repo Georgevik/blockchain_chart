@@ -1,4 +1,4 @@
-apply plugin: 'com.android.feature'
+apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
@@ -37,6 +37,6 @@ dependencies {
     api presentationDependencies.appcompat
 
     // Test
-    testApi "junit:junit:${jUnitVersion}"
-    testApi testDependencies.mockk
+    testImplementation "junit:junit:${jUnitVersion}"
+    testImplementation testDependencies.mockk
 }

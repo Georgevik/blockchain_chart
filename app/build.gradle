@@ -27,6 +27,9 @@ dependencies {
 
     kapt commonDependencies.daggerCompiler
 
+    testImplementation "junit:junit:${jUnitVersion}"
+    testImplementation testDependencies.mockk
+
     implementation project(path: ':pricechart')
     implementation project(path: ':base')
 }
