@@ -5,5 +5,5 @@ import com.georgevik.pricechart.domain.MarketPriceChart
 import io.reactivex.Single
 
 interface MarketPriceRepository {
-    fun requestMarketPrice(interval: ChartDuration): Single<MarketPriceChart>
+    fun requestMarketPrice(duration: ChartDuration): Single<MarketPriceChart>
 }
