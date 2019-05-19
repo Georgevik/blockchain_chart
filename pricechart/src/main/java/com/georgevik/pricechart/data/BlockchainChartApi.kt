@@ -5,7 +5,7 @@ import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Query
 
-interface BlockchainAPI {
+interface BlockchainChartApi {
 
     @GET("transactions-per-second?rollingAverage=8hours&format=json")
     fun getCreditDrafts(

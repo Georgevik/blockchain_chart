@@ -8,5 +8,5 @@ data class MarketPriceChartRaw constructor(
     @SerializedName("unit") val unit: String?,
     @SerializedName("period") val period: String?,
     @SerializedName("description") val description: String?,
-    @SerializedName("values") val values: List<SampleChartRaw>
+    @SerializedName("values") val values: List<ChartSampleRaw>?
 )

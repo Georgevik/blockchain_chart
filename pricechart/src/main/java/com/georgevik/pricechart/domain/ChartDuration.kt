@@ -1,6 +1,6 @@
 package com.georgevik.pricechart.domain
 
-enum class SampleInterval {
+enum class ChartDuration {
     ONE_WEEK,
     TWO_WEEKS,
     THREE_WEEKS,
