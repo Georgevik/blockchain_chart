@@ -27,11 +27,23 @@ dependencies {
     def testDependencies = rootProject.ext.testDependencies
     def presentationDependencies = rootProject.ext.presentationDependencies
 
+    // Kotlin
     api commonDependencies.kotlin
     api commonDependencies.coreKtx
+
+    // Dagger
     api commonDependencies.dagger
-    api commonDependencies.rxJava
     kapt commonDependencies.daggerCompiler
+
+    // RX
+    api commonDependencies.rxJava
+
+    // Network
+    api commonDependencies.gson
+    api commonDependencies.okHttp
+    api commonDependencies.retrofit2
+    api commonDependencies.retrofitRxAdapter
+    api commonDependencies.retrofitConverter
 
     // Android X
     api presentationDependencies.appcompat
