@@ -1,12 +1,11 @@
-package com.georgevik.blockchaingraph.presentation
+package com.georgevik.blockchaingraph.presentation.priceChart
 
 import com.georgevik.base.injection.scopes.ActivityScope
-import com.georgevik.blockchaingraph.injection.ActivityModule
 import com.georgevik.pricechart.PriceChartComponent
 import dagger.Subcomponent
 
 @ActivityScope
-@Subcomponent(modules = [ActivityModule::class])
+@Subcomponent(modules = [ChartModule::class])
 interface ChartComponent : PriceChartComponent.Provider {
 
     fun inject(activity: ChartActivity)

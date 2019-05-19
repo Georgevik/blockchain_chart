@@ -1,4 +1,4 @@
-package com.georgevik.blockchaingraph.injection
+package com.georgevik.blockchaingraph.presentation
 
 import android.content.res.Resources
 import androidx.appcompat.app.AppCompatActivity
@@ -14,4 +14,5 @@ class ActivityModule(
     fun provideResources(): Resources {
         return activity.resources
     }
+
 }
