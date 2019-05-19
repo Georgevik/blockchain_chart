@@ -47,6 +47,7 @@ dependencies {
 
     // Android X
     api presentationDependencies.appcompat
+    api presentationDependencies.lifecycleExtension
 
     // Test
     testImplementation "junit:junit:${jUnitVersion}"
