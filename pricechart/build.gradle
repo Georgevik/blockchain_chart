@@ -35,7 +35,8 @@ dependencies {
 
     implementation presentationDependencies.constraintLayout
     implementation presentationDependencies.material
-
+    implementation presentationDependencies.cardview
+    implementation presentationDependencies.mpCharts
 
     // Test
     testImplementation "junit:junit:${jUnitVersion}"
