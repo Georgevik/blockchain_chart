@@ -51,13 +51,13 @@ class ChartSampleMapperTest {
 
     //region TEST
     @Test
-    fun testThatChartSampleDateMillisIsTheSameThanXParam() {
-        val millis = 1558260919L
-        val raw = mockChartSampleRaw(x = millis, y = 1.2)
+    fun testThatChartSampleDateIsWellParsed_When_RawRetrievesSeconds() {
+        val seconds = 1558260919L
+        val raw = mockChartSampleRaw(x = seconds, y = 1.2)
 
         val chartSample = mapper.apply(raw)
 
-        Assert.assertEquals(millis, chartSample.date.time)
+        Assert.assertEquals(seconds, chartSample.date.time / 1000)
     }
 
     @Test
