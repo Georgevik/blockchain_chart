@@ -24,9 +24,11 @@ abstract class BaseViewModel : ViewModel(), LifecycleObserver {
     //region FAILURE HANDLER
     val failureLiveData: LiveData<Failure> = failureMutableLiveData
 
-    protected fun handleError(failure: Failure) {
+    protected fun handleError(failure: Failure?) {
         failureMutableLiveData.postValue(failure)
     }
+
+    protected fun clearError() = handleError(null)
     //endregion FAILURE HANDLER
 
 
